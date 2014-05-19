@@ -99,7 +99,7 @@ $classify_data = array(
 );
 
 // train
-$train = new Zinnia_Trainer();
+$trainer = new Zinnia_Trainer();
 $char = new Zinnia_Character();
 
 foreach ($train_data as $train_row) {
@@ -112,10 +112,10 @@ foreach ($train_data as $train_row) {
             $char->add($i, $xy[0], $xy[1]);
         }
     }
-    $train->add($char);
+    $trainer->add($char);
 }
 
-$train->train("/tmp/model");    // generates /tmp/model.txt
+$trainer->train("/tmp/model");    // generates /tmp/model.txt
 
 // classify
 $recognizer = new Zinnia_Recognizer();
