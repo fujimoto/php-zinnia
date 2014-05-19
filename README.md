@@ -10,6 +10,7 @@ install Zinnia first (typicall, will be located in /usr/local), and then
 $ cd php-zinnia
 $ phpize
 $ ./configure
+$ make
 $ sudo make install
 ```
 
